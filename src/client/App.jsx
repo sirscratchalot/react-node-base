@@ -1,11 +1,18 @@
 import React,{ Component } from 'react';
 import './app.css';
 import ReactImage from './react.png';
-import Comp from "./Comp.jsx"
+import Comp from "./Comp.jsx";
+import DateTime from './dateTime.jsx';
 
 export default class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      simple:null,
+      destOffset:"",
 
-state = {simple:null}
+    }    
+  }
 componentWillmount() {
     this.setState({simple:"Not gotten"});
   }
@@ -22,7 +29,9 @@ componentWillmount() {
       <div>
         <h1>{this.props.propOne}</h1>
         <Comp propOne={this.state.propOne} callback={() => { this.setState({propOne:"I WAS CALLED BACK"})}}/>
+        <DateTime/>  
       </div>
+     
     );
   }
 }
