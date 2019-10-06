@@ -13,13 +13,17 @@ export default class DateTime extends Component {
     const offset = destOffset-localoffset;
     const dt = new Date( new Date().getTime() + offset * 3600 * 1000)
 
+
     return dt;
  }
 
  render() {
+     const timezone = this.timeZone();   
     return (
       <div>
-        <h2> Bangkok  {this.timeZone().d}</h2>
+        <h2> Bangkok </h2>
+<p>{timezone.getDate()}:{timezone.getMonth()}:{timezone.getFullYear()}</p>
+<p>{timezone.getHours()}:{timezone.getMinutes()}:{timezone.getSeconds()}</p>
       </div>
     );
   }
