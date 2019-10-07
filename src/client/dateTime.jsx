@@ -20,9 +20,9 @@ export default class DateTime extends Component {
  render() {
      const timezone = this.timeZone();   
     return (
-      <div>
+      <div className = "timeZone">          
         <h2> Bangkok </h2>
-<p>{timezone.getDate()}:{timezone.getMonth()}:{timezone.getFullYear()}</p>
+<p>{timezone.getDate()}/{timezone.getMonth()}/{timezone.getFullYear()}</p>
 <p>{timezone.getHours()}:{timezone.getMinutes()}:{timezone.getSeconds()}</p>
       </div>
     );
